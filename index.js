@@ -56,22 +56,19 @@ function handleOperations(operand1, operator, operand2) {
     if (typeof result === "number" && !isNaN(result)) {
       historyArr.push([operand1, operator, operand2, "=", result]);
     }
-  }
-  if (operator === "-") {
+  } else if (operator === "-") {
     result = operand1 - operand2;
     handleOutputEdgeCases(result);
     if (typeof result === "number" && !isNaN(result)) {
       historyArr.push([operand1, operator, operand2, "=", result]);
     }
-  }
-  if (operator === "×") {
+  } else if (operator === "×") {
     result = operand1 * operand2;
     handleOutputEdgeCases(result);
     if (typeof result === "number" && !isNaN(result)) {
       historyArr.push([operand1, operator, operand2, "=", result]);
     }
-  }
-  if (operator === "÷") {
+  } else if (operator === "÷") {
     if (operand2 === 0) {
       console.error("Can not divide by 0, clearing output");
       setTimeout(init, 2000, true);
@@ -82,15 +79,13 @@ function handleOperations(operand1, operator, operand2) {
     if (typeof result === "number" && !isNaN(result)) {
       historyArr.push([operand1, operator, operand2, "=", result]);
     }
-  }
-  if (operator === "^") {
+  } else if (operator === "^") {
     result = operand1 ** operand2;
     handleOutputEdgeCases(result);
     if (typeof result === "number" && !isNaN(result)) {
       historyArr.push([operand1, operator, operand2, "=", result]);
     }
-  }
-  if (operator === "√") {
+  } else if (operator === "√") {
     result = Math.sqrt(operand1);
     handleOutputEdgeCases(result);
     if (typeof result === "number" && !isNaN(result)) {
@@ -101,20 +96,20 @@ function handleOperations(operand1, operator, operand2) {
     setTimeout(init, 2000, true);
     return;
   }
-}
-const expressionBtn = document.createElement("button");
-const expressionListItem = document.createElement("li");
-expressionBtn.className = "btn btn--expression";
-if (typeof result === "number" && !isNaN(result)) {
-  for (let i = 0; i < historyArr[previousHistoryArrLength].length; i++) {
-    expressionBtn.textContent += `${historyArr[previousHistoryArrLength][i]} `;
+  const expressionBtn = document.createElement("button");
+  const expressionListItem = document.createElement("li");
+  expressionBtn.className = "btn btn--expression";
+  if (typeof result === "number" && !isNaN(result)) {
+    for (let i = 0; i < historyArr[previousHistoryArrLength].length; i++) {
+      expressionBtn.textContent += `${historyArr[previousHistoryArrLength][i]} `;
+    }
   }
+  expressionBtn.textContent = expressionBtn.textContent.trimEnd();
+  expressionBtn.disabled = historySectionBtnsDisabled ? true : false;
+  historySectionList.appendChild(expressionListItem);
+  expressionListItem.appendChild(expressionBtn);
+  init();
 }
-expressionBtn.textContent = expressionBtn.textContent.trimEnd();
-expressionBtn.disabled = historySectionBtnsDisabled ? true : false;
-historySectionList.appendChild(expressionListItem);
-expressionListItem.appendChild(expressionBtn);
-init();
 
 function historySectionBtnDisabler(toggle) {
   // enables/disables history section buttons when it is being displayed/hidden, based on a boolean

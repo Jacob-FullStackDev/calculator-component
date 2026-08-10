@@ -1,13 +1,17 @@
 # Calculator Component
 
-## Features:
+## About
+
+- I built this to act as an auxillary project to my mental-workout project's mental math practice feature: [GitHub](https://github.com/Jacob-FullStackDev/mental-workout)
+
+## Features
 
 - Support for addition, subtraction, multiplication, division, exponents, square roots, decimals
 - Robust error handling for unintended actions
 - Handled several edgecases such as division by 0, operands/results not being a number, result being too many digits or being larger than JavaScript's Max Safe Integer
 - A history section for all your past expressions, and a button to clear them all
 
-## Future Features:
+## Future Features
 
 - Support more than one operand/2 operands
 - Handle percentages
@@ -21,7 +25,7 @@
 - Only whole numbers can currently be rooted, and that edgecase is currently improperly handled
 - If something goes wrong, there'll be either a warning or error in the browser console
 
-## Technologies used:
+## Technologies used
 
 - **HTML**
 - **CSS**
@@ -34,7 +38,7 @@
 
 1. Video demonstration at [Google Drive]()
 
-2. Visit a live version at [Github Pages]()
+2. Visit a live version at [Github Pages](https://jacob-fullstackdev.github.io/calculator-component/)
 
 3. Alternatively, Clone the repository using the following command:
    ```bash
@@ -44,7 +48,7 @@
 ## Credits
 
 "A (more) Modern CSS Reset" by Andy Bell
-Source: https://piccalil.li/blog/a-more-modern-css-reset/
+Source: [Piccalil](https://piccalil.li/blog/a-more-modern-css-reset)
 Licensed under CC BY 3.0
 https://creativecommons.org/licenses/by/3.0/
 Modified: removed comments and unused element selectors.

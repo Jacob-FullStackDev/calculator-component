@@ -34,15 +34,15 @@
 - **VS Code** (for codebase management)
 - **GitHub** (for storing repository and hosting)
 
-**Installation Instructions**
+**Engaging with the project**
 
-1. Video demonstration at [Google Drive]()
+1. Video demonstration at [Google Drive](https://drive.google.com/file/d/10B1lcftSmv38JMcbAsstcrkEErMDKZys/view)
 
 2. Visit a live version at [Github Pages](https://jacob-fullstackdev.github.io/calculator-component/)
 
 3. Alternatively, Clone the repository using the following command:
    ```bash
-   git clone https://github.com/Jacob-FullStackDev/book-tracker.git
+   git clone https://github.com/Jacob-FullStackDev/calculator-component.git
    ```
 
 ## Credits
